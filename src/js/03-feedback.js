@@ -25,6 +25,9 @@ function reloadPage() {
 function onSubmit(evt) {
   evt.preventDefault();
   console.log(dataForm);
+  if (email.value === '' || message.value === '') {
+    return alert('Please fill in all fields');
+  }
   evt.currentTarget.reset();
   localStorage.removeItem(LS_KEY);
 }
